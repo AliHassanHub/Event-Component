@@ -5,7 +5,7 @@ const Index: React.FC = () => {
   return (
     <main className="min-h-screen bg-background p-8">
       <div className="container mx-auto">
-        <h1 className="text-3xl font-bold text-foreground mb-8">Events</h1>
+        
         <EventList />
       </div>
     </main>

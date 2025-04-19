@@ -8,7 +8,7 @@ export const AddEventButton: React.FC<AddEventButtonProps> = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="rounded bg-[#6B047C] gap-2.5 text-sm text-white font-medium tracking-[-0.28px] leading-[1.3] px-2.5 py-2 hover:bg-[#5A0369] transition-colors"
+      className="rounded bg-[#6B047C] text-white font-medium text-sm px-6 py-2.5 hover:bg-[#5A0369] active:bg-[#4A0259] transform hover:scale-105 active:scale-100 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#6B047C] focus:ring-opacity-50"
     >
       Add new event
     </button>

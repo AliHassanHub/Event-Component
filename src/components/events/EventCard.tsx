@@ -20,53 +20,44 @@ export const EventCard: React.FC<EventCardProps> = ({
   onRegister,
 }) => {
   return (
-    <article className="bg-white self-stretch min-w-60 grow shrink w-[342px] my-auto pt-4 pb-6 px-4 rounded-lg max-md:max-w-full">
-      <div className="rounded w-full overflow-hidden">
+    <article className="bg-white rounded-lg shadow-sm overflow-hidden">
+      <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
         <img
           src={image}
           alt={title}
-          className="aspect-[2.17] object-contain w-full"
+          className="absolute inset-0 w-full h-full object-cover"
         />
       </div>
-      <div className="w-full font-medium mt-2">
-        <div className="w-full">
-          <div className="w-full">
-            <div className="text-[#808080] text-[10px] leading-[1.3] tracking-[-0.2px]">
-              {status}
-            </div>
-            <h3 className="text-[#1A011E] text-base tracking-[-0.32px] mt-1">
-              {title}
-            </h3>
+      
+      <div className="p-6">
+        <div className="text-xs text-gray-500 uppercase tracking-wide">
+          {status}
+        </div>
+        <h3 className="text-lg font-semibold mt-2 text-gray-900">
+          {title}
+        </h3>
+        
+        <div className="flex justify-between mt-4">
+          <div>
+            <div className="text-xs text-gray-500">Date</div>
+            <div className="text-sm font-medium">{date}</div>
           </div>
-          <div className="flex w-full items-center gap-[40px_100px] leading-[1.3] justify-between mt-2">
-            <div className="self-stretch w-[111px] my-auto">
-              <div className="text-[#808080] text-xs tracking-[-0.24px]">
-                Date
-              </div>
-              <div className="text-[#1A011E] text-sm tracking-[-0.28px]">
-                {date}
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-stretch whitespace-nowrap text-right justify-center my-auto">
-              <div className="text-[#808080] text-xs tracking-[-0.24px]">
-                Time
-              </div>
-              <div className="text-[#1A011E] text-sm tracking-[-0.28px]">
-                {time}
-              </div>
-            </div>
+          <div>
+            <div className="text-xs text-gray-500">Time</div>
+            <div className="text-sm font-medium">{time}</div>
           </div>
         </div>
-        <div className="flex min-h-[34px] w-full items-center gap-4 text-sm whitespace-nowrap tracking-[-0.28px] leading-[1.3] mt-6">
+
+        <div className="flex gap-4 mt-6">
           <button
             onClick={onPreview}
-            className="self-stretch rounded bg-white border border-[#6B047C] gap-2.5 text-[#6B047C] flex-1 shrink basis-[0%] my-auto px-2.5 py-2 hover:bg-[#6B047C] hover:text-white transition-colors"
+            className="flex-1 py-2.5 px-4 border border-[#6B047C] text-[#6B047C] rounded hover:bg-[#6B047C] hover:text-white active:bg-[#4A0259] active:border-[#4A0259] transform hover:scale-105 active:scale-100 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#6B047C] focus:ring-opacity-50 text-sm font-medium"
           >
             Preview
           </button>
           <button
             onClick={onRegister}
-            className="self-stretch rounded bg-[#6B047C] gap-2.5 text-white flex-1 shrink basis-[0%] my-auto px-2.5 py-2 hover:bg-[#5A0369] transition-colors"
+            className="flex-1 py-2.5 px-4 bg-[#6B047C] text-white rounded hover:bg-[#5A0369] active:bg-[#4A0259] transform hover:scale-105 active:scale-100 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#6B047C] focus:ring-opacity-50 text-sm font-medium"
           >
             Register
           </button>
